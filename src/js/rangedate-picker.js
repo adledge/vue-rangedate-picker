@@ -182,6 +182,10 @@ export default {
     righttoleft: {
       type: String,
       default: 'false'
+    },
+    closeIcon: {
+      type: String,
+      default: 'fa fa-close'
     }
   },
   data () {

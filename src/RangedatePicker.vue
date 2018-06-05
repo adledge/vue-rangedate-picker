@@ -4,7 +4,7 @@
     <div class="calendar" :class="{'calendar-mobile ': isCompact, 'calendar-right-to-left': isRighttoLeft}" v-if="isOpen">
       <div class="calendar-head" v-if="!isCompact">
         <h2>{{captions.title}}</h2>
-        <i class="close" @click="toggleCalendar()">&times</i>
+        <i :class="closeIcon" @click="toggleCalendar()"></i>
       </div>
       <div class="calendar-wrap">
         <div class="calendar_month_left" :class="{'calendar-left-mobile': isCompact}" v-if="showMonth">
@@ -52,7 +52,7 @@
           <li><button class="calendar-btn-apply" @click="setDateValue()">{{captions.ok_button}}</button></li>
         </ul>
       </div>
-      
+
     </div>
   </div>
 </template>
@@ -61,11 +61,6 @@
 
 <style lang="css" scoped>
 .input-date {
-  display: block;
-  border: 1px solid #ccc;
-  padding: 5px;
-  font-size: 14px;
-  width: 230px;
   cursor: pointer;
 }
 
