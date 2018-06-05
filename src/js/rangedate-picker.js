@@ -8,7 +8,7 @@ const availableMonths = {
   ID: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November',
     'Desember'],
   FR: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre',
-  'Décembre']
+    'Décembre']
 }
 
 const availableShortDays = {
@@ -185,7 +185,7 @@ export default {
     },
     closeIcon: {
       type: String,
-      default: 'fa fa-close'
+      default: 'close fa fa-close'
     }
   },
   data () {
