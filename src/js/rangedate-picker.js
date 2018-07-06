@@ -1,4 +1,6 @@
 import fecha from 'fecha'
+import 'vue-awesome/icons/calendar-alt'
+import Icon from 'vue-awesome/components/Icon'
 
 const defaultConfig = {}
 const defaultI18n = 'FR'
@@ -128,6 +130,9 @@ const defaultPresets = function (i18n = defaultI18n) {
 }
 
 export default {
+  components: {
+    Icon
+  },
   name: 'vue-rangedate-picker',
   props: {
     configs: {

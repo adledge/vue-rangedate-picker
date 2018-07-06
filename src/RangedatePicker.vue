@@ -1,10 +1,10 @@
 <template>
   <div class="calendar-root">
-    <div class="input-date" @click="toggleCalendar()"> {{getDateString(dateRange.start)}} - {{getDateString(dateRange.end)}}</div>
+    <div class="input-date" @click="toggleCalendar()"><icon name="calendar-alt" class="mr-1"></icon>  {{getDateString(dateRange.start)}} - {{getDateString(dateRange.end)}}</div>
     <div class="calendar" :class="{'calendar-mobile ': isCompact, 'calendar-right-to-left': isRighttoLeft}" v-if="isOpen">
       <div class="calendar-head" v-if="!isCompact">
         <h2>{{captions.title}}</h2>
-        <i :class="closeIcon" @click="toggleCalendar()"></i>
+        <span :class="closeIcon" @click="toggleCalendar()"></span>
       </div>
       <div class="calendar-wrap">
         <div class="calendar_month_left" :class="{'calendar-left-mobile': isCompact}" v-if="showMonth">
@@ -251,5 +251,9 @@ li.calendar_days_in-range {
   border: none;
   padding: 5px;
   font-size: 14px;
+}
+
+.mr-1 {
+  margin-right: 0.5em;
 }
 </style>
